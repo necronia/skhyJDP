@@ -1,10 +1,11 @@
 // SPDX-License-Identifier: MIT
 
-pragma solidity 0.6.6;
+pragma solidity ^0.6.0;
 
-import "./Context.sol";
+import "../../GSN/Context.sol";
 import "./IERC20.sol";
-import "./SafeMath.sol";
+import "../../math/SafeMath.sol";
+import "../../utils/Address.sol";
 
 /**
  * @dev Implementation of the {IERC20} interface.
@@ -32,6 +33,7 @@ import "./SafeMath.sol";
  */
 contract ERC20 is Context, IERC20 {
     using SafeMath for uint256;
+    using Address for address;
 
     mapping (address => uint256) private _balances;
 
@@ -140,10 +142,9 @@ contract ERC20 is Context, IERC20 {
      * @dev See {IERC20-transferFrom}.
      *
      * Emits an {Approval} event indicating the updated allowance. This is not
-     * required by the EIP. See the note at the beginning of {ERC20}.
+     * required by the EIP. See the note at the beginning of {ERC20};
      *
      * Requirements:
-     *
      * - `sender` and `recipient` cannot be the zero address.
      * - `sender` must have a balance of at least `amount`.
      * - the caller must have allowance for ``sender``'s tokens of at least
@@ -221,7 +222,7 @@ contract ERC20 is Context, IERC20 {
      *
      * Emits a {Transfer} event with `from` set to the zero address.
      *
-     * Requirements:
+     * Requirements
      *
      * - `to` cannot be the zero address.
      */
@@ -241,7 +242,7 @@ contract ERC20 is Context, IERC20 {
      *
      * Emits a {Transfer} event with `to` set to the zero address.
      *
-     * Requirements:
+     * Requirements
      *
      * - `account` cannot be the zero address.
      * - `account` must have at least `amount` tokens.

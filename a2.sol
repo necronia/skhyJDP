@@ -7,8 +7,6 @@
 
 pragma solidity ^0.6.0;
 
-import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v3.2.0/contracts/presets/ERC20PresetMinterPauser.sol";
-
 contract Ballot {
     ERC20PresetMinterPauser public erc;
 
