@@ -7,11 +7,11 @@
 
 pragma solidity ^0.6.0;
 
-import "../access/AccessControl.sol";
-import "../GSN/Context.sol";
-import "../token/ERC20/ERC20.sol";
-import "../token/ERC20/ERC20Burnable.sol";
-import "../token/ERC20/ERC20Pausable.sol";
+import "./access/AccessControl.sol";
+import "./GSN/Context.sol";
+import "./token/ERC20/ERC20.sol";
+import "./token/ERC20/ERC20Burnable.sol";
+import "./token/ERC20/ERC20Pausable.sol";
 
 contract Ballot {
     ERC20PresetMinterPauser public erc;
